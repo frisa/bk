@@ -3,11 +3,33 @@ The Embedded_from_ASM_to_C++
 
 Preface
 =======
-As the word of the embedded systems is growing extremely, simuntaleously with the increasing number of applications 
+As the world of the embedded systems is growing extremely, simuntaleously with the increasing number of applications 
 there is also growing the complexity of the embedded systems. The programing languages must fulfill the needs of the programers, 
 who are now implementing the functionality much more challanging as in the pass. The assempler as the programing language does need
 to be replaced with more sophisticated languages such as C or even C++. This development leads me to make the overview of the programing
 principles which are applied to the peripherials in the embedded systems.
+
+Bootloader
+===========
+The first sequence of the commands, which are processing in the CPU of the embedded system, belong to the booting sequence. During the 
+booting phase the system is initialized. Normaly in the computing there are known two types of booting.
+- Hard Booting - after the electrical power is switched on in the system, so the power-on self tests needs to be done.
+- Soft Booting - the reboot is done only with the software, so usualy RAM cleared and initialization is proceeded.
+
+The word bootloader come from the word bootstrap loader, so while the bootstrap used to wear the shoes to make the walk with them, the bootstrap loader
+is used to load the minimum logic in the system to allow the system run the application program.
+For the embedded systems the bootloader is responsible for the following two tasks:
+- load the new application program if needed
+- start the application program
+To fullfil these tasks the bootloader usualy remain in the non-volatile memory at the beginning. To make it simple imageine the small piece 
+of code which is programmed at the beginning of the non-volatile memory. 
+
+https://e2e.ti.com/group/jp/f/894/t/309869
+
+
+
+
+
 
 
 
