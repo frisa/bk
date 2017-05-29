@@ -1,0 +1,13 @@
+The Embedded_from_ASM_to_C++
+=============================
+
+Preface
+=======
+As the word of the embedded systems is growing extremely, simuntaleously with the increasing number of applications 
+there is also growing the complexity of the embedded systems. The programing languages must fulfill the needs of the programers, 
+who are now implementing the functionality much more challanging as in the pass. The assempler as the programing language does need
+to be replaced with more sophisticated languages such as C or even C++. This development leads me to make the overview of the programing
+principles which are applied to the peripherials in the embedded systems.
+
+
+
