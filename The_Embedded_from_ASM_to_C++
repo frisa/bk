@@ -22,11 +22,27 @@ For the embedded systems the bootloader is responsible for the following two tas
 - load the new application program if needed
 - start the application program
 To fullfil these tasks the bootloader usualy remain in the non-volatile memory at the beginning. To make it simple imageine the small piece 
-of code which is programmed at the beginning of the non-volatile memory. 
+of code which is programmed at the beginning of the non-volatile memory.
 
+The Example of Cortex-M4
+=========================
 https://e2e.ti.com/group/jp/f/894/t/309869
 
+The Linux Example on Raspberry Pi 3
+===================================
 
+When the Raspberry Pi is first turned on, the ARM core is off, and the GPU core is on. 
+At this point the SDRAM is disabled.
+The GPU starts executing the first stage bootloader, which is stored in ROM on the SoC. 
+The first stage bootloader reads the SD card, and loads the second stage bootloader (bootcode.bin) into the L2 cache, and runs it.
+bootcode.bin enables SDRAM, and reads the third stage bootloader (loader.bin) from the SD card into RAM, and runs it. 
+[ More recent versions do not use a third stage bootloader. ]
+[ If applicable ]loader.bin reads the GPU firmware (start.elf).
+start.elf reads config.txt, cmdline.txt and kernel.img
+loader.bin doesn't do much. It can handle .elf files, and so is needed to load start.elf at the top of memory 
+(ARM uses SDRAM from address zero). 
+There is a plan to add elf loading support to bootcode.bin, which would make loader.bin unnecessary, 
+but it's a low priority (I guess it might save you 100ms on boot). [ This change has since taken place. ]
 
 
 
