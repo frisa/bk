@@ -44,6 +44,22 @@ loader.bin doesn't do much. It can handle .elf files, and so is needed to load s
 There is a plan to add elf loading support to bootcode.bin, which would make loader.bin unnecessary, 
 but it's a low priority (I guess it might save you 100ms on boot). [ This change has since taken place. ]
 
+UART - Universal Asynchronous Reciever Transmiter
+==================================================
+
+I2C - Inter Integrated Circuit
+===============================
+
+SSI - Synchronous Serial Interface
+===================================
+The synchrone serial comunication which is used mainly in the comunication between the microcontroler and the sensor. The 
+topology is the point to point with the master slave structure. The connection is done with four whires. The communication with the 
+sensor is controled with the following logic. The data from the sensor (slave) are shifted out whan the sensor recieves the pulse train from the 
+microcontroler (master) as shown below on the picture.
+
+https://www.posital.com/media/posital_media/documents/AbsoluteEncoders_Context_Technology_SSI_AppNote.pdf
+
+
 
 
 
