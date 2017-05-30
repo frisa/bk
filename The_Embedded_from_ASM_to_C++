@@ -49,6 +49,8 @@ UART - Universal Asynchronous Reciever Transmiter
 
 I2C - Inter Integrated Circuit
 ===============================
+This comunication is based on the multi master and multi slave structure. The technick is usualy used for the transfering the data
+between the lower-speed peripherials for the short distance (intra-board).
 
 SSI - Synchronous Serial Interface
 ===================================
